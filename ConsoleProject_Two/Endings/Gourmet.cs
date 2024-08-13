@@ -47,10 +47,8 @@ namespace ConsoleProject_Two.Endings
             Console.WriteLine("===========================================");
             Console.WriteLine();
             Console.WriteLine("처 음 부 터   다 시   도 전 해 보 세 요 .");
-
-            game.Over();
         }
 
-        public override void Update() { }
+        public override void Update() { game.Over(); }
     }
 }

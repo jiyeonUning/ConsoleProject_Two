@@ -15,7 +15,7 @@ namespace ConsoleProject_Two
         private SceneEnding[] endingScenes;
 
         private Scene curScene;
-        public SceneEnding curEndingScene;
+        private SceneEnding curEndingScene;
 
         public Scene CurScene { get { return curScene; } }
         public SceneEnding CurEndingScene { get { return curEndingScene; } }
@@ -74,6 +74,7 @@ namespace ConsoleProject_Two
 
             //시스템화면
             curScene = scenes[(int)SceneType.타이틀화면];
+            curEndingScene = endingScenes[(int)EndingType.불효녀];
             scenes[(int)SceneType.인벤토리] = new Inventory(this); 
 
             //엔딩장면
@@ -81,7 +82,7 @@ namespace ConsoleProject_Two
             endingScenes[(int)EndingType.미식가] = new Gourmet(this);
 
             curScene.Enter();
-            curEndingScene.Enter();
+            curEndingScene.Enter(); // null 이라고 뜨면서 종료
         }
 
         public void Over()

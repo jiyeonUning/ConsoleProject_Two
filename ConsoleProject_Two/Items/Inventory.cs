@@ -1,8 +1,9 @@
 ﻿namespace ConsoleProject_Two.Iventory
 {
-    public class Inventory : SceneItem
+    public class Inventory : Scene
     {
         private string input;
+        public string itemName;
 
         public Inventory(Game game) : base(game) { }
         public override void Enter()
@@ -11,7 +12,7 @@
         }
 
         public override void Exit() { }
-        public override void Input() { Console.ReadLine(); }
+        public override void Input() { input = Console.ReadLine(); }
 
         public override void Render()
         {
@@ -48,7 +49,7 @@
                     Console.Clear();
                     Console.WriteLine("잘못 입력하셨습니다! 9번을 골라주세요. 스크립트를 다시 출력합니다...");
                     Thread.Sleep(1000);
-                    game.ChangeItemScene(ItemType.인벤토리);
+                    game.ChangeScene(SceneType.인벤토리);
                     break;
             }
         }

@@ -15,9 +15,14 @@ namespace ConsoleProject_Two.Endings
             Console.Clear();
             Console.WriteLine("어머니의 말에 고개를 젓습니다...");
             Thread.Sleep(2000);
+            Console.Clear();
         }
 
-        public override void Exit() { }
+        public override void Exit()
+        {
+            game.Over();
+        }
+
         public override void Input() { }
 
         public override void Render()
@@ -37,8 +42,8 @@ namespace ConsoleProject_Two.Endings
             Console.WriteLine("비록 혼자서 즐기는 식사지만, 당신은 집에서 즐겁게 아침식사를 할 수 있었습니다.");
             Console.WriteLine();
             Console.WriteLine("=========================================================================================");
-            Console.WriteLine("엔터키를 입력하세요.");
-            Console.ReadLine();
+            Console.WriteLine("아무 키나 입력하세요.");
+            Console.ReadKey();
             Console.Clear();
             Console.WriteLine("===========================================");
             Console.WriteLine("=                                         =");
@@ -49,6 +54,6 @@ namespace ConsoleProject_Two.Endings
             Console.WriteLine("처 음 부 터   다 시   도 전 해 보 세 요 .");
         }
 
-        public override void Update() { game.Over(); }
+        public override void Update() {  }
     }
 }

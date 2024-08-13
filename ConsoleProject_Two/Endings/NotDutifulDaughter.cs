@@ -9,18 +9,15 @@ namespace ConsoleProject_Two.Endings
     public class NotDutifulDaughter : SceneEnding
     {
         public NotDutifulDaughter(Game game) : base(game) { }
-
         public override void Enter()
         {
             Console.Clear();
             Console.WriteLine("당신은 침대를 살핍니다...");
             Thread.Sleep(2000);
+            Console.Clear();
         }
 
-        public override void Exit() { }
-        public override void Input() { }
-
-        public override void Render()
+        public override void Exit()
         {
             Console.WriteLine("=========================================================================================");
             Console.WriteLine();
@@ -29,8 +26,8 @@ namespace ConsoleProject_Two.Endings
             Console.WriteLine("아래서 당신을 애타게 부르는 소리는 포근한 햇볕과 잠자리에 뭍혀져만 갑니다...");
             Console.WriteLine();
             Console.WriteLine("=========================================================================================");
-            Console.WriteLine("엔터키를 입력하세요.");
-            Console.ReadLine();
+            Console.WriteLine("아무 키나 입력하세요.");
+            Console.ReadKey();
             Console.Clear();
             Console.WriteLine("==================================================");
             Console.WriteLine("=                                                =");
@@ -39,8 +36,11 @@ namespace ConsoleProject_Two.Endings
             Console.WriteLine("==================================================");
             Console.WriteLine();
             Console.WriteLine("처 음 부 터   다 시   도 전 해 보 세 요 .");
+            game.Over();
         }
 
-        public override void Update() { game.Over(); }
+        public override void Input() { }
+        public override void Render() { }
+        public override void Update() { }
     }
 }

@@ -59,6 +59,8 @@ namespace ConsoleProject_Two
             // < 장면(Scene) 나열 >
             //시작 화면
             scenes[(int)SceneType.타이틀화면] = new Title(this);
+            //시스템화면
+            scenes[(int)SceneType.인벤토리] = new Inventory(this); 
 
             //집
             scenes[(int)SceneType.내방_시작] = new MyRoomFrist(this);
@@ -72,17 +74,18 @@ namespace ConsoleProject_Two
             //바깥
             scenes[(int)SceneType.바깥] = new Outside(this);
 
-            //시스템화면
-            curScene = scenes[(int)SceneType.타이틀화면];
-            curEndingScene = endingScenes[(int)EndingType.불효녀];
-            scenes[(int)SceneType.인벤토리] = new Inventory(this); 
 
             //엔딩장면
-            endingScenes[(int)EndingType.불효녀] = new NotDutifulDaughter(this);  // 씬을 나눠서 출력하고 싶은데 어떻게 하면 좋을까요
+            endingScenes[(int)EndingType.nobady] = new NoBady(this);
+            endingScenes[(int)EndingType.불효녀] = new NotDutifulDaughter(this);
             endingScenes[(int)EndingType.미식가] = new Gourmet(this);
 
+            //누적
+            curScene = scenes[(int)SceneType.타이틀화면];
+            curEndingScene = endingScenes[(int)EndingType.nobady];
+            //======================================================
             curScene.Enter();
-            curEndingScene.Enter(); // null 이라고 뜨면서 종료
+            curEndingScene.Enter();
         }
 
         public void Over()
@@ -174,6 +177,6 @@ namespace ConsoleProject_Two
     }
 
     public enum ItemType { 재봉키트, 재봉가위, iSize }
-    public enum EndingType { 불효녀, 미식가, eSize }
+    public enum EndingType { nobady, 불효녀, 미식가, eSize }
 
 }

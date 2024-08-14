@@ -17,6 +17,7 @@
 
         public override void Render()
         {
+            Console.Clear();
             Console.WriteLine("===========================================================================================================");
             Console.WriteLine();
             Console.WriteLine("\"정말 고맙구나! 할머니께서도 분명 기뻐하실거야.\" 어머니가 행복하게 웃었습니다.");

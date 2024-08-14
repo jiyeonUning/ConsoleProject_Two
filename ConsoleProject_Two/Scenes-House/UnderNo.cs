@@ -17,10 +17,11 @@
 
         public override void Render()
         {
+            Console.Clear();
             Console.WriteLine("=================================================================");
             Console.WriteLine();
             Console.WriteLine("잠깐 내려가지 않는다고 해서 화를 내시진 않을거예요.");
-            Console.WriteLine("당신은 2층에 위치해있는, 당신의 아기자기한 방을 바라봅니다.");
+            Console.WriteLine("당신은 2층에 위치한 자신의 아기자기한 방을 바라봅니다.");
             Console.WriteLine();
             Console.WriteLine("=================================================================");
             Console.WriteLine();

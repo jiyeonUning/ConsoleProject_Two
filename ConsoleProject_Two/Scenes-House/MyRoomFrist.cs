@@ -17,7 +17,6 @@ namespace ConsoleProject_Two.Scenes
             Console.Clear();
             Console.WriteLine(" L O A D I N G . . . ");
             Thread.Sleep(1000);
-            Console.Clear();
         }
 
         public override void Exit() { }
@@ -25,6 +24,7 @@ namespace ConsoleProject_Two.Scenes
 
         public override void Render()
         {
+            Console.Clear();
             Console.WriteLine("================================================================================================");
             Console.WriteLine();
             Console.WriteLine("\"빨간 망토야, 어서 내려와보렴!\"");

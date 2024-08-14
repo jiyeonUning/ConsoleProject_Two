@@ -23,6 +23,7 @@ namespace ConsoleProject_Two.Scenes
 
         public override void Render()
         {
+            Console.Clear();
             Console.WriteLine("================================================================================================");
             Console.WriteLine();
             Console.WriteLine("\"빨간 망토야! 좋은 아침이로구나.\" 당신의 어머니가 언제나처럼 온화한 미소로 당신을 반깁니다.");

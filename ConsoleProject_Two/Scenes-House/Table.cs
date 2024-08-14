@@ -23,6 +23,7 @@ namespace ConsoleProject_Two.Scenes
 
         public override void Render()
         {
+            Console.Clear();
             Console.WriteLine("====================================================================================================");
             Console.WriteLine();
             Console.WriteLine("당신의 취미는 재봉입니다. 당신이 쓰고 있는 빨간색의 귀여운 두건 또한 당신의 작품이지요.");
@@ -30,7 +31,8 @@ namespace ConsoleProject_Two.Scenes
             Console.WriteLine();
             Console.WriteLine("====================================================================================================");
             Console.WriteLine();
-            Console.WriteLine("물건을 챙기시겠습니까? 보기 중 딱 하나만 가져갈 수 있습니다.");
+            Console.WriteLine("물건을 챙기시겠습니까? 보기의 선택지 중 딱 한 가지만 수행할 수 있습니다.");
+            Console.WriteLine();
             Console.WriteLine("1. 가위를 챙긴다.");
             Console.WriteLine("2. 실과 바늘을 챙긴다.");
             Console.WriteLine("3. 아무것도 챙기지 않고 내려간다.");

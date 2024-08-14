@@ -16,6 +16,7 @@
 
         public override void Render()
         {
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("==============================================");
             Console.ResetColor();

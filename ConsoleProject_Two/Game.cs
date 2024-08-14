@@ -36,16 +36,19 @@ namespace ConsoleProject_Two
         private void Render()
         {
             curScene.Render();
+            curEndingScene.Render();
         }
 
         private void Input()
         {
             curScene.Input();
+            curEndingScene.Input();
         }
 
         private void Update()
         {
             curScene.Update();
+            curEndingScene.Update();
         }
 
         //=============================
@@ -80,6 +83,7 @@ namespace ConsoleProject_Two
             endingScenes[(int)EndingType.불효녀] = new NotDutifulDaughter(this);
             endingScenes[(int)EndingType.미식가] = new Gourmet(this);
 
+
             //누적
             curScene = scenes[(int)SceneType.타이틀화면];
             curEndingScene = endingScenes[(int)EndingType.nobady];
@@ -96,6 +100,7 @@ namespace ConsoleProject_Two
         private void End()
         {
             curScene.Exit();
+            curEndingScene.Exit();
         }
 
         //===================================================
@@ -133,50 +138,4 @@ namespace ConsoleProject_Two
             scenes = prevScene;
         }
     }
-    //==========================================================
-
-    public abstract class Scene
-    {
-        protected Game game;
-
-        public Scene(Game game)
-        {
-            this.game = game;
-        }
-
-        public abstract void Enter();
-        public abstract void Render();
-        public abstract void Input();
-        public abstract void Update();
-        public abstract void Exit();
-    }
-    public abstract class SceneEnding
-    {
-        protected Game game;
-
-        public SceneEnding(Game game)
-        {
-            this.game = game;
-        }
-
-        public abstract void Enter();
-        public abstract void Render();
-        public abstract void Input();
-        public abstract void Update();
-        public abstract void Exit();
-    }
-
-    public enum SceneType
-    {
-        타이틀화면, 인벤토리,
-        내방_시작, 아래층1, 아래층2,
-        책상, 획득재봉가위, 획득재봉키트, 동의함,
-        바깥,
-
-        Size
-    }
-
-    public enum ItemType { 재봉키트, 재봉가위, iSize }
-    public enum EndingType { nobady, 불효녀, 미식가, eSize }
-
 }

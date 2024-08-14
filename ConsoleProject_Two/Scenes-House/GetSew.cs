@@ -23,6 +23,7 @@ namespace ConsoleProject_Two.Scenes
 
         public override void Render()
         {
+            Console.Clear();
             Console.WriteLine("====================================================================================================");
             Console.WriteLine();
             Console.WriteLine("비록 당신 손만한 크기의 조그만 재봉키트이지만... 아무튼 주머니에 소중히 넣어둡니다.");
@@ -30,6 +31,7 @@ namespace ConsoleProject_Two.Scenes
             Console.WriteLine();
             Console.WriteLine("====================================================================================================");
             Console.WriteLine();
+            Console.WriteLine("인벤토리의 다음과 같은 아이템을 추가합니다 : ");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("미니 재봉 키트 (가위 미포함) +");
             Console.ResetColor();

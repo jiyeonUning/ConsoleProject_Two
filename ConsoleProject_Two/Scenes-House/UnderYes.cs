@@ -55,7 +55,7 @@ namespace ConsoleProject_Two.Scenes
                     game.ChangeEndingScene(EndingType.미식가);
                     break;
                 case "0":
-                    game.ChangeScene(SceneType.인벤토리);
+                    game.InvenIn();
                     break;
                 default:
                     Console.Clear();

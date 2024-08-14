@@ -8,7 +8,7 @@
         public Inventory(Game game) : base(game) { }
         public override void Enter()
         {
-            game.InvenIn();
+
         }
 
         public override void Exit() { }

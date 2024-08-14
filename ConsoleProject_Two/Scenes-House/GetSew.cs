@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleProject_Two.Items;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,11 @@ namespace ConsoleProject_Two.Scenes
 
         public override void Render()
         {
+            ItemBuilder sew = new ItemBuilder();
+            sew.id = 2;
+            sew.name = "재봉 키트";
+            sew.have = true;
+
             Console.Clear();
             Console.WriteLine("====================================================================================================");
             Console.WriteLine();
@@ -37,7 +43,6 @@ namespace ConsoleProject_Two.Scenes
             Console.ResetColor();
             Console.WriteLine();
             Console.WriteLine("1. 아래로 내려간다.");
-            Console.WriteLine("0. 가지고 있는 물건들을 확인한다.");
             Console.Write("선택 : ");
         }
 
@@ -47,15 +52,6 @@ namespace ConsoleProject_Two.Scenes
             {
                 case "1":
                     game.ChangeScene(SceneType.아래층1);
-                    break;
-                case "0":
-                    game.InvenIn();
-                    break;
-                default:
-                    Console.Clear();
-                    Console.WriteLine("잘못 입력하셨습니다! 보기의 선택지에서 골라주세요. 스크립트를 다시 출력합니다...");
-                    Thread.Sleep(2000);
-                    game.ChangeScene(SceneType.획득재봉키트);
                     break;
             }
         }

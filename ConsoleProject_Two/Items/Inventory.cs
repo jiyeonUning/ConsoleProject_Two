@@ -1,15 +1,14 @@
-﻿namespace ConsoleProject_Two.Iventory
+﻿using ConsoleProject_Two.Items;
+
+namespace ConsoleProject_Two.Iventory
 {
     public class Inventory : Scene
     {
         private string input;
-        public string itemName;
 
-        public Inventory(Game game) : base(game) { }
-        public override void Enter()
-        {
+        public Inventory(Game game) : base(game)  {  }
 
-        }
+        public override void Enter() { }
 
         public override void Exit() { }
         public override void Input() { input = Console.ReadLine(); }
@@ -29,7 +28,7 @@
 
             Console.WriteLine();
             Console.WriteLine($"          : 소지하고 있는 아이템 :");
-            Console.WriteLine($" {itemName,-6}");
+                    Console.Write($" {item}, ");
             Console.WriteLine();
 
             Console.ForegroundColor = ConsoleColor.Yellow;

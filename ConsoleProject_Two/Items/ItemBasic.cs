@@ -10,20 +10,20 @@ namespace ConsoleProject_Two.Items
     {
         public int id;
         public string name;
-        public string explain;
+        public bool have;
     }
 
     public class ItemBuilder
     {
         public int id;
         public string name;
-        public string explain;
+        public bool have;
 
         public ItemBuilder()
         {
             id = 0;
             name = "아이템이름";
-            explain = "설명이 들어간다";
+            have = false;
         }
 
         public ItemBasic Build()
@@ -31,12 +31,12 @@ namespace ConsoleProject_Two.Items
             ItemBasic item = new ItemBasic();
             item.id = id;
             item.name = name;
-            item.explain = explain;
+            item.have = have;
             return item;
         }
 
         public void SetID(int id) { this.id = id; }
         public void SetName(string name) { this.name = name; }
-        public void SetExplain(string explain) { this.explain = explain; }
+        public void SetExplain(string explain) { this.have = have; }
     }
 }

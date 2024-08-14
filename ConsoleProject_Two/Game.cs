@@ -9,7 +9,7 @@ namespace ConsoleProject_Two
     public class Game
     {
         private bool isRunning;
-        public Scene[] prevScene; // 인벤토리 이동 전 이전 화면 저장용
+        public int prevScene; // 인벤토리 이동 전 이전 화면 저장용
 
         private Scene[] scenes;
         private SceneEnding[] endingScenes;
@@ -124,7 +124,6 @@ namespace ConsoleProject_Two
         // 인벤토리 이전 화면 저장
         public void InvenIn()
         {
-            prevScene = scenes;
             Console.Clear();
             Console.WriteLine("가지고 있는 물건을 확인합니다...");
             Thread.Sleep(1000);
@@ -135,7 +134,10 @@ namespace ConsoleProject_Two
             Console.Clear();
             Console.WriteLine("물건을 정리합니다...");
             Thread.Sleep(1000);
-            scenes = prevScene;
+
+            curScene.Exit();
+            curScene = scenes[prevScene];
+            curScene.Enter();
         }
     }
 }

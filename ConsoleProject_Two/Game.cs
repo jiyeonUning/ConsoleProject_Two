@@ -64,7 +64,7 @@ namespace ConsoleProject_Two
             //시작 화면
             scenes[(int)SceneType.타이틀화면] = new Title(this);
             //시스템화면
-            scenes[(int)SceneType.인벤토리] = new Inventory(this);
+            scenes[(int)SceneType.인벤토리] = new InventoryScene(this);
 
             //집
             scenes[(int)SceneType.내방_시작] = new MyRoomFrist(this);

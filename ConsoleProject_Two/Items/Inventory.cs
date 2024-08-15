@@ -1,56 +1,44 @@
-﻿using ConsoleProject_Two.Items;
-
-namespace ConsoleProject_Two.Iventory
+﻿namespace ConsoleProject_Two.Items
 {
-    public class Inventory : Scene
+    public class Inventory
     {
-        private string input;
+        // 교수님이 작성하신 지난 과제풀이 중
+        // 동적 인벤토리 구현 과제 참고하였습니다
 
-        public Inventory(Game game) : base(game)  {  }
+        public const int MAXitem = 9;
+        private List<ItemList> items;
+        public int itemCount => items.Count;
 
-        public override void Enter() { }
-
-        public override void Exit() { }
-        public override void Input() { input = Console.ReadLine(); }
-
-        public override void Render()
+        public Inventory()
         {
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("==============================================");
-            Console.ResetColor();
-            Console.WriteLine();
-
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write("                빨 간");
-            Console.ResetColor();
-            Console.WriteLine("  망 토");
-
-            Console.WriteLine();
-            Console.WriteLine($"          : 소지하고 있는 아이템 :");
-                    Console.Write($" {item}, ");
-            Console.WriteLine();
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("===============================================");
-            Console.ResetColor();
-            Console.WriteLine();
-            Console.WriteLine("돌 아 가 려 면   9 번  키 를   눌 러 주 세 요 .");
+            items = new List<ItemList>(9);
         }
 
-        public override void Update()
+        // ===============================================
+
+        public bool AddItem(ItemList itemList)
         {
-            switch (input)
+            if (items.Count == MAXitem) return false;
+            items.Add(itemList); return true;
+        }
+
+        public bool RemoveItem(int index)
+        {
+            if (index < 0 || items.Count <= index) return false;
+            items.RemoveAt(index); return true;
+        }
+
+        public void ShowAllItems()
+        {
+            if (items.Count == 0) { Console.Write(" "); }
+            else
             {
-                case "9":
-                    game.InvenOut();
-                    break;
-                default:
-                    Console.Clear();
-                    Console.WriteLine("잘못 입력하셨습니다! 9번을 골라주세요. 스크립트를 다시 출력합니다...");
-                    Thread.Sleep(1000);
-                    game.ChangeScene(SceneType.인벤토리);
-                    break;
+                for (int i = 0; i < items.Count; i++)
+                {
+                    if (true) { Console.Write($"{items[i]}"); }
+                    else { Console.Write(" "); }
+                   
+                }
             }
         }
     }

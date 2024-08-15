@@ -16,6 +16,7 @@ namespace ConsoleProject_Two.Scenes
             Console.Clear();
             Console.WriteLine("가위를 집어듭니다...");
             Thread.Sleep(2000);
+            Item scissors = ItemList.CreateScissors(ItemType.재봉가위);
         }
 
         public override void Exit() { }
@@ -23,11 +24,6 @@ namespace ConsoleProject_Two.Scenes
 
         public override void Render()
         {
-            ItemBuilder scissors = new ItemBuilder();
-            scissors.id = 1;
-            scissors.name = "재봉 가위";
-            scissors.have = true;
-
             Console.Clear();
             Console.WriteLine("====================================================================================================");
             Console.WriteLine();

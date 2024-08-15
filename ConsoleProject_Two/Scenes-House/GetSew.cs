@@ -17,6 +17,7 @@ namespace ConsoleProject_Two.Scenes
             Console.Clear();
             Console.WriteLine("실과 바늘을 집어듭니다...");
             Thread.Sleep(2000);
+            Item sew = ItemList.CreateSew(ItemType.재봉키트);
         }
 
         public override void Exit() { }
@@ -24,11 +25,6 @@ namespace ConsoleProject_Two.Scenes
 
         public override void Render()
         {
-            ItemBuilder sew = new ItemBuilder();
-            sew.id = 2;
-            sew.name = "재봉 키트";
-            sew.have = true;
-
             Console.Clear();
             Console.WriteLine("====================================================================================================");
             Console.WriteLine();

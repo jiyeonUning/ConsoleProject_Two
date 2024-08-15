@@ -16,9 +16,6 @@ namespace ConsoleProject_Two
 
         Size }
 
-
-    public enum ItemType { 재봉키트, 재봉가위, iSize }
-
     public enum EndingType { nobady, 불효녀, 미식가, eSize }
 
 }

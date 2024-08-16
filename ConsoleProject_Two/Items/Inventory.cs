@@ -5,6 +5,8 @@
         // 교수님이 작성하신 지난 과제풀이 중
         // 동적 인벤토리 구현 과제 참고하였습니다
 
+        // 아이템 추가 미구현 
+
         public const int MAXitem = 9;
         private List<ItemList> items;
         public int itemCount => items.Count;

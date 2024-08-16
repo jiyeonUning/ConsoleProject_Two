@@ -3,6 +3,9 @@ using ConsoleProject_Two.Items;
 using ConsoleProject_Two.Iventory;
 using ConsoleProject_Two.Scenes;
 using ConsoleProject_Two.Scenes_Outside;
+using ConsoleProject_Two.Scenes_Outside.NPChunter;
+using ConsoleProject_Two.Scenes_Outside.NPCtoto;
+using ConsoleProject_Two.Scenes_Outside.NPCyouth;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ConsoleProject_Two
@@ -75,9 +78,23 @@ namespace ConsoleProject_Two
             scenes[(int)SceneType.획득재봉키트] = new GetSew(this);
             scenes[(int)SceneType.동의함] = new Agree(this);
 
+
             //바깥
-            scenes[(int)SceneType.바깥] = new Outside(this);
             scenes[(int)SceneType.마을] = new Town(this);
+            scenes[(int)SceneType.상점] = new Town(this); // 임시
+            scenes[(int)SceneType.숲물어봄] = new ForestIn(this);
+
+
+            scenes[(int)SceneType.사냥꾼] = new HunterFrist(this);
+
+
+            scenes[(int)SceneType.청년] = new YouthFrist(this);
+
+
+            scenes[(int)SceneType.토토] = new TotoFrist(this);
+
+
+
 
             //엔딩장면
             endingScenes[(int)EndingType.nobady] = new NoBady(this);

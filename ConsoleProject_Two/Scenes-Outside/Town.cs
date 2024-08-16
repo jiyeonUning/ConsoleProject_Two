@@ -41,35 +41,44 @@ namespace ConsoleProject_Two.Scenes_Outside
             playerPos = new Point(13, 10);
             gameObjects = new List<GameObject>();
 
+            Place shop = new Place(this);
+            shop.pos = new Point(10, 16);
+            shop.simbol = '$';
+            shop.color = ConsoleColor.Yellow;
+            shop.destination = SceneType.상점; // 미구현
+
             Place forest = new Place(this);
             forest.pos = new Point(25, 18);
             forest.simbol = '숲';
             forest.color = ConsoleColor.Green;
+            forest.destination = SceneType.숲물어봄;
+
+            gameObjects.Add(shop);
             gameObjects.Add(forest);
+
+            //==================================
 
             Place hunter = new Place(this);
             hunter.pos = new Point(4, 8);
             hunter.simbol = '사';
             hunter.color = ConsoleColor.Yellow;
-            gameObjects.Add(hunter);
+            hunter.destination = SceneType.사냥꾼;
 
             Place youth = new Place(this);
             youth.pos = new Point(24, 7);
             youth.simbol = '청';
             youth.color = ConsoleColor.Yellow;
-            gameObjects.Add(youth);
+            youth.destination = SceneType.청년;
 
             Place toto = new Place(this);
             toto.pos = new Point(11, 4);
             toto.simbol = '토';
             toto.color = ConsoleColor.Yellow;
-            gameObjects.Add(toto);
+            toto.destination = SceneType.토토;
 
-            Place shop = new Place(this);
-            shop.pos = new Point(10, 16);
-            shop.simbol = '$';
-            shop.color = ConsoleColor.Yellow;
-            gameObjects.Add(shop);
+            gameObjects.Add(hunter);
+            gameObjects.Add(youth);
+            gameObjects.Add(toto);
         }
        
         public override void Enter()
@@ -77,6 +86,7 @@ namespace ConsoleProject_Two.Scenes_Outside
             Console.CursorVisible = false;
 
             Console.Clear();
+            Console.WriteLine(" L O A D I N G . . . ");
             Thread.Sleep(700);
             Console.Clear();
             Console.WriteLine("=================================================================");

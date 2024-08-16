@@ -43,7 +43,7 @@
             switch (input)
             {
                 case "1":
-                    game.ChangeScene(SceneType.바깥);
+                    game.ChangeScene(SceneType.마을);
                     break;
                 case "0":
                     game.InvenIn();

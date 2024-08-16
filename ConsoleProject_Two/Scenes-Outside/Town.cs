@@ -49,19 +49,19 @@ namespace ConsoleProject_Two.Scenes_Outside
 
             Place hunter = new Place(this);
             hunter.pos = new Point(3, 4);
-            hunter.simbol = '@';
+            hunter.simbol = '사';
             hunter.color = ConsoleColor.Yellow;
             gameObjects.Add(hunter);
 
             Place youth = new Place(this);
             youth.pos = new Point(22, 5);
-            youth.simbol = '@';
+            youth.simbol = '청';
             youth.color = ConsoleColor.Yellow;
             gameObjects.Add(youth);
 
-            Place toto = new Place(this);
+            Place toto = new Place(this); // 출력 자체가 안되는 문제 발견
             toto.pos = new Point(13, 3);
-            toto.simbol = '@';
+            toto.simbol = '토';
             toto.color = ConsoleColor.Yellow;
             gameObjects.Add(youth);
         }

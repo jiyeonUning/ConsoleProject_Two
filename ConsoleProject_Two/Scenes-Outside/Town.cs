@@ -8,9 +8,7 @@ namespace ConsoleProject_Two.Scenes_Outside
     {
         private bool[,] map;
         private Point playerPos;
-
         private List<GameObject> gameObjects;
-
         private ConsoleKey input;
 
         public Town(Game game) : base(game)
@@ -38,32 +36,32 @@ namespace ConsoleProject_Two.Scenes_Outside
                 { false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false }, // 18
                 { false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false }, // 19
                 { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false }  // 20
-                }; // 너무 넓게 잡아서 맵과 이동간의 괴리가 심한상태입니다. 어떻게 해결하면 좋을까요?
+                }; // 너무 넓게 잡아서 맵과 이동간의 괴리가 심한상태입니다
 
             playerPos = new Point(14, 10);
             gameObjects = new List<GameObject>();
 
             Place forest = new Place(this);
             forest.pos = new Point(23, 18);
-            forest.simbol = '@';
+            forest.simbol = '숲';
             forest.color = ConsoleColor.Green;
             gameObjects.Add(forest);
 
             Place hunter = new Place(this);
             hunter.pos = new Point(3, 4);
-            hunter.simbol = '사';
+            hunter.simbol = '@';
             hunter.color = ConsoleColor.Yellow;
             gameObjects.Add(hunter);
 
             Place youth = new Place(this);
             youth.pos = new Point(22, 5);
-            youth.simbol = '청';
+            youth.simbol = '@';
             youth.color = ConsoleColor.Yellow;
             gameObjects.Add(youth);
 
             Place toto = new Place(this);
             toto.pos = new Point(13, 3);
-            toto.simbol = '토';
+            toto.simbol = '@';
             toto.color = ConsoleColor.Yellow;
             gameObjects.Add(youth);
         }
@@ -120,9 +118,9 @@ namespace ConsoleProject_Two.Scenes_Outside
             {
                 for (int x = 0; x < map.GetLength(1); x++)
                 {
-                    if (map[y, x])
+                    if (map[y, x]) // 해당부분의 문제로 보이는데,
                     {
-                        Console.Write("  ");
+                        Console.Write("  "); // 이 부분을 1칸으로 하면 아래 출력과 가로 넓이가 맞지 않아 맵에 제대로 구현되지 않고, 2칸으로 할 시 맵은 구현이 완료되나 이동에 문제가 생깁니다.
                     }
                     else
                     {

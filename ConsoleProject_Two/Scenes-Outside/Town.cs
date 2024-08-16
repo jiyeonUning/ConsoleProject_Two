@@ -14,58 +14,64 @@ namespace ConsoleProject_Two.Scenes_Outside
         public Town(Game game) : base(game)
         {
             map = new bool[,]
-                {//  0      1      2      3     4      5       6      7      8      9     10     11     12     13     14     15     16     17     18     19     20     21    22      23     24     25               
-                { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false }, // 0
-                { false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false }, // 1
-                { false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false }, // 2
-                { false,  true, false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false,  true,  true,  true,  true, false, false,  true, false }, // 3
-                { false,  true, false, false,  true,  true,  true,  true,  true,  true,  true,  true, false,  true,  true,  true, false,  true,  true,  true,  true,  true,  true, false,  true, false }, // 4
-                { false,  true, false,  true,  true,  true,  true,  true,  true,  true,  true,  true, false,  true,  true,  true, false,  true,  true,  true,  true,  true,  true, false,  true, false }, // 5
-                { false,  true, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  false, false, true,  true,  true,  true, false }, // 6
-                { false,  true, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  false, false, true,  true,  true,  true, false }, // 7
-                { false,  true, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  false, false, true,  true,  true,  true, false }, // 8
-                { false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false }, // 9
-                { false,  true,  true, false,  true,  true,  true,  true,  true,  true,  true,  true, false,  true,  true,  true, false,  true,  true,  true,  true,  true,  true, false,  true, false }, // 10
-                { false,  true, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false,  true,  true,  true,  true,  true,  true, false,  true, false }, // 11
-                { false,  true, false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false,  false,  true,  true,  true, true, false, false,  true, false }, // 12
-                { false,  true,  true, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false }, // 13
-                { false,  true,  true,  true, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false }, // 14
-                { false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false }, // 15
-                { false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false }, // 16
-                { false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false }, // 17
-                { false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false }, // 18
-                { false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false }, // 19
-                { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false }  // 20
-                }; // 너무 넓게 잡아서 맵과 이동간의 괴리가 심한상태입니다
+                {//  0      1      2      3     4      5       6      7      8      9     10     11     12     13     14     15     16     17     18     19     20     21     22     23     24     25     26               
+                { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false }, // 0
+                { false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false }, // 1
+                { false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false }, // 2
+                { false, false, false, false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false, false,  true,  true, false, false, false,  true,  true, false, false }, // 3
+                { false, false, false, false, false,  true,  true,  true,  true,  true,  true,  true,  true, false, false,  true,  true,  true, false, false,  true,  true,  true,  true, false, false,  true,  true, false, false }, // 4
+                { false, false, false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false }, // 5
+                { false, false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false,  false, false, true,  true,  true,  true,  true, false, false }, // 6
+                { false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false,  false, false, true,  true,  true,  true,  true, false, false }, // 7
+                { false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false }, // 8
+                { false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false,  true,  true,  true, false, false,  true,  true,  true,  true, false, false,  true,  true, false, false }, // 9
+                { false, false, false,  true, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false, false,  true,  true, false, false, false,  true,  true, false, false }, // 10
+                { false, false, false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false }, // 11
+                { false, false, false, false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false }, // 12
+                { false, false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false }, // 13
+                { false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false }, // 14
+                { false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false }, // 15
+                { false, false, false,  true,  true,  true,  true,  true,  true, false,  true, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false }, // 16
+                { false, false, false,  true,  true,  true,  true,  true,  true, false, false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false }, // 17
+                { false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false }, // 18
+                { false, false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true, false, false }, // 19
+                { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false }  // 20
+                };
 
-            playerPos = new Point(14, 10);
+            playerPos = new Point(13, 10);
             gameObjects = new List<GameObject>();
 
             Place forest = new Place(this);
-            forest.pos = new Point(23, 18);
+            forest.pos = new Point(25, 18);
             forest.simbol = '숲';
             forest.color = ConsoleColor.Green;
             gameObjects.Add(forest);
 
             Place hunter = new Place(this);
-            hunter.pos = new Point(3, 4);
+            hunter.pos = new Point(4, 8);
             hunter.simbol = '사';
             hunter.color = ConsoleColor.Yellow;
             gameObjects.Add(hunter);
 
             Place youth = new Place(this);
-            youth.pos = new Point(22, 5);
+            youth.pos = new Point(24, 7);
             youth.simbol = '청';
             youth.color = ConsoleColor.Yellow;
             gameObjects.Add(youth);
 
-            Place toto = new Place(this); // 출력 자체가 안되는 문제 발견
-            toto.pos = new Point(13, 3);
+            Place toto = new Place(this);
+            toto.pos = new Point(11, 4);
             toto.simbol = '토';
             toto.color = ConsoleColor.Yellow;
-            gameObjects.Add(youth);
-        }
+            gameObjects.Add(toto);
 
+            Place shop = new Place(this);
+            shop.pos = new Point(10, 16);
+            shop.simbol = '$';
+            shop.color = ConsoleColor.Yellow;
+            gameObjects.Add(shop);
+        }
+       
         public override void Enter()
         {
             Console.CursorVisible = false;
@@ -86,15 +92,9 @@ namespace ConsoleProject_Two.Scenes_Outside
             Console.Clear();
         }
 
-        public override void Exit()
-        {
-            Console.CursorVisible = true;
-        }
+        public override void Exit() { Console.CursorVisible = true; }
 
-        public override void Input()
-        {
-            input = Console.ReadKey().Key;
-        }
+        public override void Input() { input = Console.ReadKey().Key; }
 
         public override void Render()
         {
@@ -118,13 +118,13 @@ namespace ConsoleProject_Two.Scenes_Outside
             {
                 for (int x = 0; x < map.GetLength(1); x++)
                 {
-                    if (map[y, x]) // 해당부분의 문제로 보이는데,
+                    if (map[y, x])
                     {
-                        Console.Write("  "); // 이 부분을 1칸으로 하면 아래 출력과 가로 넓이가 맞지 않아 맵에 제대로 구현되지 않고, 2칸으로 할 시 맵은 구현이 완료되나 이동에 문제가 생깁니다.
+                        Console.Write(" ");
                     }
                     else
                     {
-                        Console.Write("ㅁ");
+                        Console.Write("▒");
                     }
                 }
                 Console.WriteLine();

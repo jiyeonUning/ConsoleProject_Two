@@ -51,6 +51,15 @@ namespace ConsoleProject_Two.Scenes_Outside.NPCtoto
                 case "1":
                     game.ChangeScene(SceneType.마을);
                     break;
+                case "2":
+                    game.ChangeScene(SceneType.마을);
+                    break;
+                case "3":
+                    game.ChangeScene(SceneType.마을);
+                    break;
+                case "4":
+                    game.ChangeScene(SceneType.마을);
+                    break;
                 case "0":
                     game.InvenIn();
                     break;

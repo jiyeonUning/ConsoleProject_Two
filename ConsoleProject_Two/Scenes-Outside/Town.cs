@@ -84,22 +84,6 @@ namespace ConsoleProject_Two.Scenes_Outside
         public override void Enter()
         {
             Console.CursorVisible = false;
-
-            Console.Clear();
-            Console.WriteLine(" L O A D I N G . . . ");
-            Thread.Sleep(700);
-            Console.Clear();
-            Console.WriteLine("=================================================================");
-            Console.WriteLine("=                                                               =");
-            Console.WriteLine("=----------- ---- --  마 을  탐 색  시 작 !  -- ---- -----------=");
-            Console.WriteLine("=                                                               =");
-            Console.WriteLine("=  자유롭게 돌아다니며, 클리어에 필요한 아이템을 수집해보세요.  =");
-            Console.WriteLine("=                                                               =");
-            Console.WriteLine("=================================================================");
-            Console.WriteLine();
-            Console.WriteLine("                아 무  키 나  눌 러   시 작 하 기                ");
-            Console.ReadKey();
-            Console.Clear();
         }
 
         public override void Exit() { Console.CursorVisible = true; }

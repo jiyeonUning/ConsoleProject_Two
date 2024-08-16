@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace ConsoleProject_Two.Scenes_Outside
 {
     public class ForestIn : Scene
+        
     {
         private string input;
 

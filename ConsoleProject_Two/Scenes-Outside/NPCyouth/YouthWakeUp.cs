@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ConsoleProject_Two.Scenes_Outside.NPCyouth
 {
-    public class YouthFrist : Scene
+    public class YouthWakeUp : Scene
     {
         private string input;
 
-        public YouthFrist(Game game) : base(game) { }
+        public YouthWakeUp(Game game) : base(game) { }
 
         public override void Enter()
         {
             Console.Clear();
-            Console.WriteLine("누군가의 형상이 보입니다...");
+            Console.WriteLine("청년을 흔들어 봅니다...");
             Thread.Sleep(1000);
         }
 
@@ -27,18 +27,16 @@ namespace ConsoleProject_Two.Scenes_Outside.NPCyouth
             Console.Clear();
             Console.WriteLine("========================================================================================================================");
             Console.WriteLine();
-            Console.WriteLine("당신 집의 바로 옆 주택에서 살고 있는 청년입니다. 키가 크지만, 항상 자세가 구부정해 멀리서보면 어쩐지 작아보입니다.");
-            Console.WriteLine("구부정한 자세로 컴퓨터 자판을 두드리며 검은 화면에 꼬불한 글자를 입력하던 것이 당신이 기억하는 청년의 모습이입니다.");
+            Console.WriteLine("\"뭣무머뭐야?!...\" 화들짝 놀란 청년이 비몽사몽한 얼굴로 자리에서 튕겨져나오듯이 일어섭니다.");
+            Console.WriteLine("그리고는 주변을 잠시 두리번 거리더니, \"아, 너였구나. 깜짝 놀랬잖아.\" 하고는, 도로 벤치에 털썩 앉았습니다.");
             Console.WriteLine();
-            Console.WriteLine("하지만, 오늘은 무슨일인지 이렇게 이른 시간에도 일어나 있네요. 손에도 아무것도 들고 있지 않습니다.");
-            Console.WriteLine("졸고 있는 것만 빼면, 매우 한가해보입니다.");
+            Console.WriteLine("\"뭐 필요한 거라도 있는거니?\" 청년이 피곤한 얼굴로 당신에게 말합니다.");
             Console.WriteLine();
             Console.WriteLine("========================================================================================================================");
             Console.WriteLine();
-            Console.WriteLine("어떻게 하시겠습니까?");
-            Console.WriteLine("1. 흔들어서 깨운다.");
-            Console.WriteLine("2. \" 어? \" ");
-            Console.WriteLine("3. 할머니 집까지 호위를 부탁한다.");
+            Console.WriteLine("무엇을 말하시겠습니까?");
+            Console.WriteLine("1. 뭔가 달라고 한다.");
+            Console.WriteLine("2. 할머니 집까지 호위를 부탁한다.");
             Console.WriteLine("4. 떠난다.");
             Console.WriteLine("0. 가지고 있는 물건들을 확인한다.");
             Console.Write("선택 : ");

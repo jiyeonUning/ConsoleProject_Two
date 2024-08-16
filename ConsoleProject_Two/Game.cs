@@ -2,6 +2,7 @@
 using ConsoleProject_Two.Items;
 using ConsoleProject_Two.Iventory;
 using ConsoleProject_Two.Scenes;
+using ConsoleProject_Two.Scenes_Inside;
 using ConsoleProject_Two.Scenes_Outside;
 using ConsoleProject_Two.Scenes_Outside.NPChunter;
 using ConsoleProject_Two.Scenes_Outside.NPCtoto;
@@ -94,7 +95,8 @@ namespace ConsoleProject_Two
             scenes[(int)SceneType.토토] = new TotoFrist(this);
 
 
-
+            //숲속
+            scenes[(int)SceneType.숲] = new Forest(this);
 
             //엔딩장면
             endingScenes[(int)EndingType.nobady] = new NoBady(this);

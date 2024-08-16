@@ -15,23 +15,21 @@ namespace ConsoleProject_Two.Iventory
 
         public override void Render()
         {
+            Inventory inventory = new Inventory();
+
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("==============================================");
             Console.ResetColor();
             Console.WriteLine();
-
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("                빨 간");
             Console.ResetColor();
             Console.WriteLine("  망 토");
-
             Console.WriteLine();
             Console.WriteLine($"          : 소지하고 있는 아이템 :");
-                    Console.Write($"{Inventory.ShowAllItems(true)}");
-            // 인벤토리 출력부터 막히는데 그 이상을 시도하는건 역시 무모하겠죠?................
+            inventory.ShowAllItems(); // 출력을 어떻게 하면 좋을까요
             Console.WriteLine();
-
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("===============================================");
             Console.ResetColor();

@@ -35,9 +35,10 @@
             {
                 for (int i = 0; i < items.Count; i++)
                 {
-                    if (true) { Console.Write($"{items[i]}"); }
-                    else { Console.Write(" "); }
-                   
+                    if (true)
+                    {
+                        Console.Write($"{items[i]}");
+                    }                
                 }
             }
         }

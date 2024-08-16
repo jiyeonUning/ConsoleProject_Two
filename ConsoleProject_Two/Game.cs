@@ -77,7 +77,7 @@ namespace ConsoleProject_Two
 
             //바깥
             scenes[(int)SceneType.바깥] = new Outside(this);
-
+            scenes[(int)SceneType.마을] = new Town(this);
 
             //엔딩장면
             endingScenes[(int)EndingType.nobady] = new NoBady(this);

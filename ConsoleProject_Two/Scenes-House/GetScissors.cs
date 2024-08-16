@@ -6,10 +6,7 @@ namespace ConsoleProject_Two.Scenes
     {
         private string input;
 
-
-        public GetScissors(Game game) : base(game)
-        { }
-
+        public GetScissors(Game game) : base(game) { }
 
         public override void Enter()
         {

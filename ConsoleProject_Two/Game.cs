@@ -88,9 +88,10 @@ namespace ConsoleProject_Two
 
             scenes[(int)SceneType.사냥꾼] = new HunterFrist(this);
 
-
             scenes[(int)SceneType.청년] = new YouthFrist(this);
-
+            scenes[(int)SceneType.청년깨움] = new YouthWakeUp(this);
+            scenes[(int)SceneType.청년버그] = new YouthAh(this);
+            scenes[(int)SceneType.청년호위] = new YouthFrist(this); // 임시
 
             scenes[(int)SceneType.토토] = new TotoFrist(this);
 
